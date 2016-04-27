@@ -32,7 +32,6 @@ public class CustomerController {
 	public String customerHome(Model model){
 		System.out.println("CustomerController.customerHome()");
 		CustomerVO customer = new CustomerVO();
-		customerDAO.addCustomer(customer);
 		model.addAttribute("customer", customer);
 		return "customer";
 	}
@@ -41,7 +40,9 @@ public class CustomerController {
 	public String customerSave(@Valid @ModelAttribute("customer") CustomerVO customer, BindingResult result, Model model){		
 		validator.validate(customer, result);
 		System.out.println("CustomerController.customerHome() - errors - " +result.hasErrors() );
+		if(!result.hasErrors()){
 		customerDAO.addCustomer(customer);
+		}
 		return "customer";
 	}
 	

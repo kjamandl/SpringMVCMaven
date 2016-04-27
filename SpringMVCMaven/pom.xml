@@ -87,6 +87,11 @@
 			<artifactId>oracle</artifactId>
 			<version>11.2.0.2.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>TestWebApp</finalName>

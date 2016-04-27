@@ -1,4 +1,4 @@
-package com.jk.myapp.utils;
+package com.jk.sprtest.dao.queries;
 
 import java.sql.Types;
 
