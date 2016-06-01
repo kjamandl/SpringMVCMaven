@@ -17,4 +17,14 @@
 	<put-attribute name="body" value="/WEB-INF/pages/customer.jsp"></put-attribute>
 </definition>
 
+<definition name="home" extends="base.definition">
+	<put-attribute name="title" value="Practitioner Credentialing - Home"></put-attribute>
+	<put-attribute name="body" value="/WEB-INF/pages/home.jsp"></put-attribute>
+</definition>
+
+<definition name="locations" extends="base.definition">
+	<put-attribute name="title" value="Practitioner Credentialing - Locations"></put-attribute>
+	<put-attribute name="body" value="/WEB-INF/pages/hcare/locations.jsp"></put-attribute>
+</definition>
+
 </tiles-definitions>

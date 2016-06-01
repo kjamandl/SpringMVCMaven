@@ -7,21 +7,18 @@
 <head>
 <title><tiles:insertAttribute name="title" /></title>
 </head>
-<body>
-	<div style="border: #C1C1C1 solid 1px; border-radius: 10px;">
+<body>	
+	<table width="100%" border="thin" bordercolor="aqua">
+		<tr><td colspan="2"><!-- Header -->
+		<tiles:insertAttribute name="header"/></td>
+		</tr>
+		<tr height="775px"><td style="vertical-align:top;width: 20%;"><tiles:insertAttribute name="menu" /></td> <td style="vertical-align:top;width: 80%;"><tiles:insertAttribute name="body" /></td>
+		</tr>
+		<tr> <td colspan="2"><tiles:insertAttribute name="footer" /></td>
+		</tr>
 		
-		<!-- Header -->
-		<tiles:insertAttribute name="header"/>
-		<!-- Menu Page -->
-		<div style="width: 100%;float: left;height: 10px;">
-			<tiles:insertAttribute name="menu" />
-		</div>
-		<!-- Body Page -->
-		<div style="width: 100%;float: right;height: 700px">
-			<tiles:insertAttribute name="body" />
-		</div>
-		<!-- Footer Page -->
-		<tiles:insertAttribute name="footer" />
-	</div>
+	</table>
+	
+	
 </body>
 </html>

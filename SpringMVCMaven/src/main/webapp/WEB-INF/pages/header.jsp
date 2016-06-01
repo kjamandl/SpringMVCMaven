@@ -1,8 +1,8 @@
-<div style="width: 100%; background-color: silver;">
-<table>
+<div style="width: 100%; background-color:aqua;">
+<table style="width: 100%;">
 		<tr>
-			<td style="float:left;"><img src="resources/images/K.png" /></td>
-			<td align="right"><h1>Customer Application</h1></td>
+			<td style="float:left"><img src="image.htm?id=1" style="width: 100px;height: 75px;"/></td>
+			<td style="float:center"><h1 align="center">Practitioner Credentialing</h1></td>
 		</tr>
 	</table>
 </div>

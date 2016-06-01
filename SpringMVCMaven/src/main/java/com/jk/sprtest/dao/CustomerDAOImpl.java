@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.jk.sprtest.dao.queries.CustomerQueries;
+import com.jk.sprtest.dao.queries.DBQueries;
 import com.jk.sprtest.model.CustomerVO;
 import com.jk.sprtest.model.CustomerVO.Gender;
 
@@ -23,11 +23,11 @@ public class CustomerDAOImpl {
 		System.out.println("CustomerDAOImpl.addCustomer() jdbcTemplate ->"+ jdbcTemplate);
 		Object[] inputs = new Object[] { customerVO.getName(),customerVO.getEmail(), customerVO.getAge(),customerVO.getGender(), customerVO.getBirthDay() };
 
-		jdbcTemplate.update(CustomerQueries.CUSTOMER_INSERT_SQL, inputs,CustomerQueries.INPUT_TYPES);
+		jdbcTemplate.update(DBQueries.CUSTOMER_INSERT_SQL, inputs,DBQueries.INPUT_TYPES);
 	}
 
 	public List<CustomerVO> getAllCustomers() {
-		List<CustomerVO> customersList = (List<CustomerVO>) jdbcTemplate.query(CustomerQueries.GET_ALL_CUSTOMERS_SQL, new CustomerRowMapper());
+		List<CustomerVO> customersList = (List<CustomerVO>) jdbcTemplate.query(DBQueries.GET_ALL_CUSTOMERS_SQL, new CustomerRowMapper());
 		System.out.println("CustomerDAOImpl.getAllCustomers() - "+ customersList);
 		return customersList;
 	}

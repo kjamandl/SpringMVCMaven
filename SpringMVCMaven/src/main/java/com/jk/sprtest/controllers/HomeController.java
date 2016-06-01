@@ -20,7 +20,7 @@ import com.jk.sprtest.model.User;
 public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@RequestMapping(value="/home",method=RequestMethod.GET)
+	@RequestMapping(value="/home.htm",method=RequestMethod.GET)
 	public String home(Model model){
 		Date date = new Date();
 		DateFormat format = SimpleDateFormat.getTimeInstance();

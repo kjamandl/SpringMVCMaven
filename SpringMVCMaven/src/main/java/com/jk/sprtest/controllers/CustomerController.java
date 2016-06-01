@@ -18,7 +18,7 @@ import com.jk.sprtest.validators.CustomerValidator;
 @Controller
 public class CustomerController {
 	
-	@Autowired	
+	@Autowired
 	private CustomerValidator validator;
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class CustomerController {
 		binder.addValidators(validator);
 	}
 	
-	@RequestMapping(value="/customerHome",method=RequestMethod.GET)
+	@RequestMapping(value="/customerHome.htm",method=RequestMethod.GET)
 	public String customerHome(Model model){
 		System.out.println("CustomerController.customerHome()");
 		CustomerVO customer = new CustomerVO();
@@ -36,7 +36,7 @@ public class CustomerController {
 		return "customer";
 	}
 	
-	@RequestMapping(value="/customerSave",method=RequestMethod.POST)
+	@RequestMapping(value="/customerSave.htm",method=RequestMethod.POST)
 	public String customerSave(@Valid @ModelAttribute("customer") CustomerVO customer, BindingResult result, Model model){		
 		validator.validate(customer, result);
 		System.out.println("CustomerController.customerHome() - errors - " +result.hasErrors() );

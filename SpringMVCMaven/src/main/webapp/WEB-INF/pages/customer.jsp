@@ -1,9 +1,9 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="springform"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <springform:form method="POST" commandName="customer"
-		action="customerSave">
+		action="customerSave.htm">
 		<springform:errors />
-		<table border=1 align="center">
+		<table>
 			<tr>
 				<td>Name</td>
 				<td><springform:input path="name" /></td>
