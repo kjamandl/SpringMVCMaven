@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jk.sprtest.model.User;
 
@@ -30,8 +31,21 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/loginPage",method=RequestMethod.GET)
+	@RequestMapping(value="/login.htm",method=RequestMethod.GET)
 	public String loginPage(Model model){
+		User user= new User();
+		model.addAttribute("loggedInUser", user);
+		return "login";
+	}
+	
+	@RequestMapping(value="/login.htm",method=RequestMethod.POST)
+	public String loginPagew(Model model){
+		
+	return "login";
+	}
+	
+	@RequestMapping(value="/*",method=RequestMethod.GET)
+	public String login(Model model){
 	return "login";
 	}
 	
@@ -39,5 +53,9 @@ public class HomeController {
 	public String login(@Validated User user,Model model){
 		model.addAttribute("userName", user.getUserName());
 		return "user";
+	}
+	@RequestMapping(value="/jquerysample.htm",method=RequestMethod.GET)	
+	public String testJQuery(Model model){
+		return "jquerysample";
 	}
 }

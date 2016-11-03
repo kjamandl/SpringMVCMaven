@@ -6,6 +6,23 @@
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
+<!-- Basic Authentication-->
+<http auto-config="true">
+	<intercept-url pattern="/*.htm" access="hasRole('ROLE_USER')"/>
+	<http-basic/>
+</http>
+
+<!-- Form based authentication -->
+<!-- <http>
+	<intercept-url pattern="/location*" access="hasRole('ROLE_USER')"/>
+	<form-login 
+				default-target-url="/login.htm" 
+				login-page="/login.htm" 
+				authentication-failure-url="/login.htm?error"
+				/>
+	<logout logout-success-url="/home"/>
+</http> -->
+
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
